@@ -3,7 +3,7 @@
 Proxima is a small exploration robot designed to navigate and observe its surroundings using a movable camera head and wireless remote control.  
 The goal of this project is to create a compact rover capable of exploring environments, sending live camera footage, and responding smoothly to analog joystick input.
 
-![Proxima Rover](images/proxima-pic-1.jpg)  
+![Proxima Rover](images/Proxima-pic-1.jpg)  
 
 ---
 
@@ -43,7 +43,7 @@ The goal of this project is to create a compact rover capable of exploring envir
 
 ---
 
-![Proxima Rover](images/Proxima-pic-2.jpg)  
+![Proxima Rover](images/Proxima-pic-2.png)  
 
 ## 📡 How It Works
 
@@ -69,13 +69,13 @@ The robot receives the joystick values and:
 - Moves the camera head using **two servos**  
 - Uses the ESP32-CAM for live video feed (WiFi separate from RF)
 
-====================================================
-                PROXIMA ROVER WIRING
-====================================================
 
-====================
-  ARDUINO UNO
-====================
+## PROXIMA ROVER WIRING:
+
+
+
+# ARDUINO UNO
+
 
 [POWER]
 - 5V  →  L293D (Vcc1)
@@ -104,9 +104,9 @@ The robot receives the joystick values and:
 - Servo Y Vcc    → 5V
 - Servo Y GND    → GND
 
-====================
-  MOTOR DRIVER (L293D)
-====================
+
+  # MOTOR DRIVER (L293D)
+
 
 [LEFT MOTOR]
 - IN1 → Pin 6
@@ -125,9 +125,9 @@ The robot receives the joystick values and:
 - Vcc2  → Battery pack (for motors, usually 6–12V)
 - GND   → Common ground (Arduino + Battery + L293D)
 
-====================
-  ESP32-CAM
-====================
+
+  # ESP32-CAM
+
 
 NOTE: ESP32-CAM is independent, not controlled by Arduino.
 
@@ -139,9 +139,9 @@ NOTE: ESP32-CAM is independent, not controlled by Arduino.
 - ESP32 streams video over WiFi
 - RX/TX not required unless debugging
 
-====================
-  BATTERY PACK
-====================
+
+# BATTERY PACK
+
 
 For motors:
 - Battery (+) → L293D Vcc2
@@ -155,16 +155,16 @@ For Arduino:
 
 MAKE SURE GROUNDS ARE ALL CONNECTED.
 
-====================================================
 
 
-====================================================
-                  PROXIMA REMOTE WIRING
-====================================================
 
-====================
-  ARDUINO UNO
-====================
+
+## PROXIMA REMOTE WIRING
+
+
+
+# ARDUINO UNO
+
 
 [POWER]
 - 5V  →  LCD Vcc
@@ -173,9 +173,9 @@ MAKE SURE GROUNDS ARE ALL CONNECTED.
 - 3.3V → NRF24 Vcc
 - GND →  All GNDs connected together (IMPORTANT)
 
-====================
-  NRF24 MODULE
-====================
+
+  # NRF24 MODULE
+
 
 CE   → Pin 7  
 CSN  → Pin 8  
@@ -185,9 +185,9 @@ SCK  → Pin 13
 VCC  → 3.3V  
 GND  → GND  
 
-====================
-  JOYSTICK #1 (MOVEMENT)
-====================
+
+  # JOYSTICK 1 (MOVEMENT)
+
 
 VRx → A0  
 VRy → A1  
@@ -199,9 +199,9 @@ Function:
 - X-axis (A0) controls left/right turning  
 - Y-axis (A1) controls forward/backward speed  
 
-====================
-  JOYSTICK #2 (CAMERA HEAD)
-====================
+
+  # JOYSTICK 2 (CAMERA HEAD)
+
 
 VRx → A2  
 VRy → A3  
@@ -213,9 +213,9 @@ Function:
 - X-axis (A2) controls camera left/right  
 - Y-axis (A3) controls camera up/down  
 
-====================
-  LCD 16x2 (Standard 6-Pin Mode)
-====================
+
+  # LCD 16x2 (Standard 6-Pin Mode)
+
 
 RS → Pin 12  
 E  → Pin 11  
@@ -232,9 +232,9 @@ VO  → Potentiometer (contrast control)
 - Pot middle pin → VO  
 - Pot side pins → 5V and GND  
 
-====================
-  OVERVIEW CONNECTIONS
-====================
+
+  ## OVERVIEW CONNECTIONS
+
 
 Arduino UNO:
 - A0 → Joystick #1 X  
@@ -247,15 +247,14 @@ Arduino UNO:
 - Pins 7–8 → NRF24 control  
 - Pins 11–13 → SPI (shared with LCD but no conflict)
 
-====================
-  POWER NOTES
-====================
+
+# POWER NOTES
+
 
 - NRF24 *must* use 3.3V  
 - All grounds must be connected  
 - If NRF24 is unstable, add 10µF capacitor across 3.3V and GND  
 
-====================================================
 
 
 ## 📷 ESP32-CAM Camera System
@@ -445,3 +444,4 @@ END ROVER
 4. Power both systems (battery for rover, USB or battery for remote).
 5. Connect to the ESP32-CAM Wi-Fi or local network to view video.
 6. Use the remote to move the robot and control the camera head.
+
