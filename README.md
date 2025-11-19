@@ -3,7 +3,7 @@
 Proxima is a small exploration robot designed to navigate and observe its surroundings using a movable camera head and wireless remote control.  
 The goal of this project is to create a compact rover capable of exploring environments, sending live camera footage, and responding smoothly to analog joystick input.
 
-![Proxima Rover](images/Proxima-pic-1.jpg)  
+<img src="images/images/Proxima-pic-1.jpg" alt="Proxima Rover" height="1000">
 
 ---
 
@@ -444,4 +444,5 @@ END ROVER
 4. Power both systems (battery for rover, USB or battery for remote).
 5. Connect to the ESP32-CAM Wi-Fi or local network to view video.
 6. Use the remote to move the robot and control the camera head.
+
 
